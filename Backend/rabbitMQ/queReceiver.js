@@ -2,7 +2,7 @@ import amqp from 'amqplib/callback_api.js';
 
 
 
-const queReceiver = (logMessage) => {
+var queReceiver = (logMessage) => {
   //CONNECTION...
     amqp.connect(process.env.RABBITMQ_URI, (err, conn) => {
         if (err) {
@@ -25,7 +25,7 @@ const queReceiver = (logMessage) => {
           // CLOSE THE RABBITMQ CONNECTION AFTER SENDIG THE LOGS...
           setTimeout(() => {
             conn.close();
-          }, 500);
+          }, 5000);
         });
       });
 }

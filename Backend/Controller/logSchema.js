@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
 const logSchema = new mongoose.Schema({
-    ExchangeService: String,
     timestamp: String,
     Category: String,
     level: String,

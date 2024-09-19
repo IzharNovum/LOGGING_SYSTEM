@@ -12,7 +12,7 @@ export const errMiddleware = (err, req, res, next)=>{
     err.statusCode = err.statusCode || 500;
 
 
-    return res.send(err.statusCode).json({
+    return res.status(err.statusCode).json({
         success : false,
         message : err.message,
     })

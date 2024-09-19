@@ -27,7 +27,7 @@ function setUpWebsocket() {
 
       const queue = 'LOGS';
       ch.assertQueue(queue, { durable: false });
-      // console.log(`Waiting for messages in ${queue}. To exit press CTRL+C`);
+      console.log(`Waiting for messages in ${queue}. To exit press CTRL+C`);
 
       ch.consume(queue, (msg) => {
         if (msg !== null) {
