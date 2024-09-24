@@ -153,7 +153,7 @@ describe('WebSocket Integration Tests', () => {
 
     // Simulate sending a log entry
     wsServer.on('connection', (socket) => {
-      socket.send(JSON.stringify(logEntry));
+      socket.send(JSON.stringify(logEntry));  
     });
 
     wsServer.on('listening', done);

@@ -1,7 +1,7 @@
 import WebSocket from 'ws';
 
 
-//WEBSOCKET CONNECTION TO RECEIVE THE DATA FORM BACKEND....
+//WEBSOCKET CONNECTION TO RECEIVE THE DATA...
 describe('WebSocket Integration Tests', () => {
   let wsServer;
   let wsClient;
@@ -121,7 +121,6 @@ describe('filterMessages', () => {
     const result = filterMessages(messages, '', '', 'EXCHANGE', '', '');
     expect(result).toEqual([messages[1]]);
     console.log("output of the test for log Cat:", result);
-
   });
 
   //test for filtering for time-range....
